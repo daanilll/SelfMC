@@ -4,7 +4,7 @@
 
 # 🎮 DanLauncher
 
-**Современный лаунчер Minecraft с мод-менеджером, автообновлением и приятным интерфейсом**
+**Современный гипер легковесный лаунчер Minecraft с мод-менеджером, автообновлением и приятным интерфейсом**
 
 [![Version](https://img.shields.io/badge/version-5.0.1-8b5cf6?style=for-the-badge)](https://github.com/daanilll/DanLauncher/releases)
 [![License](https://img.shields.io/badge/license-MIT-10b981?style=for-the-badge)](LICENSE)
