@@ -1,29 +1,14 @@
-<div align="center">
-
-<img src="docs/logo.png" alt="SelfMC" width="128" height="128">
-
 # SelfMC
 
-**Современный лаунчер Minecraft для Windows с мод-менеджером, автообновлением и приятным интерфейсом**
+**Современный лаунчер Minecraft для Windows на PySide6 с мод-менеджером, автообновлением и приятным интерфейсом**
 
-[![Version](https://img.shields.io/badge/version-6.0.1-8b5cf6?style=for-the-badge)](https://github.com/daanilll/SelfMC/releases)
-[![License](https://img.shields.io/badge/license-MIT-10b981?style=for-the-badge)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.12+-3b82f6?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/platform-Windows-f59e0b?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/daanilll/SelfMC/releases)
-
-[![GitHub Stars](https://img.shields.io/github/stars/daanilll/SelfMC?style=for-the-badge&color=fbbf24)](https://github.com/daanilll/SelfMC/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/daanilll/SelfMC?style=for-the-badge&color=ef4444)](https://github.com/daanilll/SelfMC/issues)
-[![Downloads](https://img.shields.io/github/downloads/daanilll/SelfMC/total?style=for-the-badge&color=22c55e)](https://github.com/daanilll/SelfMC/releases)
-
-[🚀 Установка](#-установка) • [✨ Возможности](#-возможности) • [📸 Скриншоты](#-скриншоты) • [🛠 Разработка](#-разработка) • [📄 Лицензия](#-лицензия)
-
-</div>
+🚀 Установка • ✨ Возможности • 📸 Скриншоты • 🛠 Разработка • ❓ FAQ • 📄 Лицензия
 
 ---
 
 ## 🎯 Что такое SelfMC?
 
-**SelfMC** — это красивый и лёгкий лаунчер Minecraft для Windows, написанный на Python с использованием **CustomTkinter**. Он создан для тех, кто устал от громоздких решений и хочет получить всё необходимое в одном месте: установку модов в один клик, управление серверами, автоматические обновления и приятный глазу интерфейс.
+**SelfMC** — это лёгкий лаунчер Minecraft для Windows, написанный на **Python 3.12** с интерфейсом на **PySide6 (Qt)**. Он создан для тех, кто устал от громоздких решений и хочет получить всё необходимое в одном месте: установку модлоадеров в один клик, поиск и установку модов, автообновление и приятный глазу интерфейс.
 
 > 💡 **Почему SelfMC?** Потому что остальные лаунчеры либо перегружены, либо не работают на Windows «из коробки». SelfMC — лёгкий, нативный, и делает ровно то, что нужно.
 
@@ -32,51 +17,48 @@
 ## ✨ Возможности
 
 ### 🎨 Интерфейс
-- 🌌 Современная тёмная и светлая темы (переключаются в настройках)
-- ✨ Плавные анимации и скруглённые элементы
-- 🖼 Кастомный фон
-- 🎯 Нативная интеграция с Windows
-- 🌐 Двуязычный интерфейс (RU / EN)
+- 🌌 Тёмная тема с кастомным фоном и скруглёнными элементами
+- 🖼 Смена фонового изображения в настройках
+- 🌐 Три языка интерфейса: **RU / EN / UA**
+- 🎯 Нативная интеграция с Windows (frameless-окно, ярлыки, установщик Inno Setup)
 
 ### ⚙️ Управление версиями
 - 🚀 Установка **Fabric / Forge / NeoForge / Quilt**
-- ☕ Автоматическая загрузка **Java Runtime**
-- 📋 Список всех установленных версий
-- 🔍 Умный поиск и сортировка версий
+- ☕ Автоматическая загрузка **Java Runtime** (jre-legacy, alpha, gamma, delta, epsilon)
+- 📋 Список установленных и доступных версий, установленные подсвечиваются серым
+- 🔍 Умный поиск и сортировка версий, автовыбор последней запущенной
+- 🧠 Автовыбор нужной Java под версию Minecraft
 
 ### 📦 Моды
-- 📦 **Мод-менеджер** с поиском и включением/выключением
-- 🔍 Поиск модов на **Modrinth** и **CurseForge**
-- 🗂 Сортировка модов по версии Minecraft
+- 📦 **Мод-менеджер** с включением/выключением и удалением модов
+- 🔍 Поиск модов на **Modrinth** прямо из лаунчера
+- 🗂 Сортировка модов по версии Minecraft (`mods_sorted/`)
 - 🎯 **Drag & Drop** модов, ресурспаков и шейдеров
 - ➕ Установка **Fabric API** в один клик
 
 ### 🔧 Технические
-- 🔄 **Автообновление** через GitHub Releases
-- 🛡 Умная обработка ошибок
+- 🔄 **Автообновление** через GitHub Releases (с поддержкой бета-версий)
 - 🌍 Поддержка зеркала **BMCLAPI** для СНГ
 - ⚙️ Прокси для обхода блокировок
-- 🎮 **Discord Rich Presence** (статус в Discord)
+- 🎮 **Discord Rich Presence**
+- 🛡 Защита от двойного запуска (single instance lock)
+- 📄 Журнал в реальном времени, включая логи Minecraft
 
 ---
 
 ## 📸 Скриншоты
 
-<div align="center">
-
 ### 🖥 Главное окно
-![Main Window](docs/screenshots/main.png)
+![Главное окно](docs/screenshots/main.png)
 
 ### 📦 Мод-менеджер
-![Mod Manager](docs/screenshots/mods.png)
+![Мод-менеджер](docs/screenshots/mods.png)
 
 ### 🔍 Поиск модов
-![Mod Search](docs/screenshots/search.png)
+![Поиск модов](docs/screenshots/search.png)
 
 ### ⚙️ Настройки
-![Settings](docs/screenshots/settings.png)
-
-</div>
+![Настройки](docs/screenshots/settings.png)
 
 ---
 
@@ -85,9 +67,8 @@
 ### 🪟 Windows (10/11)
 
 1. Скачай **`SelfMC-Setup-x.x.x-x64.exe`** из [последнего релиза](https://github.com/daanilll/SelfMC/releases/latest).
-2. Запусти установщик.
-3. Следуй инструкциям мастера установки.
-4. После установки — запусти **SelfMC** из меню «Пуск» или с рабочего стола.
+2. Запусти установщик и следуй инструкциям мастера.
+3. После установки запусти **SelfMC** из меню «Пуск» или с рабочего стола.
 
 **Требования:**
 - Windows 10/11 (64-bit)
@@ -99,139 +80,180 @@
 
 bash
 # Установи зависимости (нужен Python 3.12)
-pip install customtkinter pillow requests minecraft_launcher_lib tkinterdnd2 pypresence
+pip install PySide6 minecraft_launcher_lib requests certifi pillow pypresence
 
 # Запусти
-python main_ctk.py
+python main_pyside.py
+
 📋 Требования
 Компонент	Минимум	Рекомендуется
 ОС	Windows 10 (64-bit)	Windows 11
-Python	3.10	3.12+
+Python (для сборки)	3.10	3.12+
 RAM	4 ГБ	8 ГБ+
 Место на диске	2 ГБ	10 ГБ+ (с модами)
 🎮 Как пользоваться
-1️⃣ Выбор версии
-Открой SelfMC → выбери версию в выпадающем списке (например, 1.21.4).
+1️⃣ Добавь аккаунт
 
-2️⃣ Установка модлоадера
-Выбери Fabric / Forge / NeoForge / Quilt → нажми «⤓ Установить».
+Нажми «+ Добавить аккаунт» → введи ник (3–16 символов, латиница и цифры, минимум одна буква).
+2️⃣ Выбор версии
 
-3️⃣ Установка модов
-Из Modrinth: кнопка «🔍 Найти мод» → введи название → «⤓ Установить»
+Открой SelfMC → выбери версию в выпадающем списке (например, 1.21.4). Если версия не установлена, кнопка сменится на «⤓ УСТАНОВИТЬ».
+3️⃣ Установка модлоадера
 
-Локально: перетащи .jar прямо в окно SelfMC
+Выбери Fabric / Forge / NeoForge / Quilt → нажми «⤓ Установить модлоадер».
+4️⃣ Установка модов
 
-Вручную: положи .jar в %APPDATA%\.minecraft\mods\
+  Из Modrinth: кнопка «🔍 Найти мод» → введи название → «⤓ Установить»
 
-4️⃣ Запуск
+  Локально: перетащи .jar прямо в окно SelfMC
+
+  Вручную: положи .jar в %APPDATA%\.minecraft\mods\
+
+5️⃣ Запуск
+
 Жми большую зелёную кнопку «▶ ИГРАТЬ».
-
 🛠 Разработка
 Структура проекта
 text
+
 SelfMC/
-├── main_ctk.py              # Основной файл лаунчера
-├── installer.py             # Скрипт установщика
-├── discord_rpc.py           # Discord Rich Presence
-├── black.ico                # Иконка приложения
-├── image.jpg                # Фоновое изображение
-├── installer.iss            # Inno Setup скрипт
-├── build.bat                # Скрипт сборки
-├── get_version.py           # Чтение версии из кода
-├── VERSION.txt              # Кэш версии для сборки
+├── main_pyside.py              # Основной файл лаунчера (PySide6)
+├── get_version.py              # Чтение версии из кода
+├── discord_rpc.py              # Discord Rich Presence (опционально)
+├── black.ico                   # Иконка приложения
+├── 08a7f786954d6af7ce56b1573bf72ee0.png  # Фоновое изображение по умолчанию
+├── installer.iss               # Inno Setup скрипт
+├── build.bat                   # Скрипт сборки
+├── VERSION.txt                 # Кэш версии для сборки (генерируется)
 ├── docs/
 │   ├── logo.png
 │   └── screenshots/
 └── README.md
+
 Сборка .exe и установщика
 bash
+
 # Просто запусти build.bat
 build.bat
+
 Скрипт автоматически:
 
-Прочитает версию из main_ctk.py
+  Прочитает версию из main_pyside.py через get_version.py
 
-Соберёт SelfMC.exe через PyInstaller
+  Соберёт SelfMC.exe через PyInstaller
 
-Создаст установщик через Inno Setup
+  Создаст установщик через Inno Setup
 
-Результат появится в installer_output\
+  Результат появится в installer_output\
 
 Версионирование
-Мелкая правка: 6.0.1 → 6.0.2 … 6.0.9
 
-Крупное обновление: 6.0.9 → 6.9.0
+  Мелкая правка: 7.0.1 → 7.0.2 … 7.0.9
 
-Следующий мажор: 6.9.9 → 7.0.0
+  Крупное обновление: 7.0.9 → 7.9.0
 
+  Следующий мажор: 7.9.9 → 8.0.0
+
+Важно: тег релиза на GitHub должен совпадать с числовой частью CURRENT_VERSION (без WIN), например 7.0.2. Суффикс WIN в коде допустим и отбрасывается парсером версий, но в теге он не нужен.
 🤝 Вклад
-🐛 Нашёл баг? → Создай Issue
 
-💡 Есть идея? → Открой обсуждение
+  🐛 Нашёл баг? → Создай Issue
 
-📝 Pull Request — приветствуется
+  💡 Есть идея? → Открой обсуждение
+
+  📝 Pull Request — приветствуется
 
 🗺 Дорожная карта
-☑ Базовый функционал
-☑ Установка Fabric / Forge / Quilt
-☑ Мод-менеджер
-☑ Поиск модов
-☑ Переход на Windows
-☑ Автообновление через GitHub Releases
-☑ Discord Rich Presence
-□ Менеджер модпаков (Modrinth Modpacks)
-□ Менеджер аккаунтов со скинами
-□ Поддержка CurseForge
-□ Переключатель языка RU / EN
-□ Сборка для Linux (.deb / .rpm)
+
+  ☑
+
+   Базовый функционал
+    ☑
+
+  Установка Fabric / Forge / NeoForge / Quilt
+    ☑
+
+  Мод-менеджер
+    ☑
+
+   Поиск модов на Modrinth
+    ☑
+
+  Переход на PySide6
+    ☑
+
+   Автообновление через GitHub Releases
+    ☑
+
+   Discord Rich Presence
+    ☑
+
+  Три языка (RU / EN / UA)
+    ☑
+
+  Зеркало BMCLAPI и прокси
+    ☑
+
+   Менеджер модпаков (Modrinth Modpacks)
+    □
+
+  Менеджер аккаунтов со скинами
+    □
+
+  Поддержка CurseForge
+    □
+
+  Сборка для Linux (.deb / .rpm)
+
 ❓ FAQ
-<details> <summary><b>SelfMC не запускается, что делать?</b></summary>
+
+SelfMC не запускается, что делать?
 Убедись, что установлен Python 3.12 (не 3.15). Если запускаешь из исходников:
-
 bash
-python -c "import customtkinter, PIL, requests"
+
+python -c "import PySide6, minecraft_launcher_lib, requests"
+
 Если что-то падает — установи:
-
 bash
-pip install customtkinter pillow requests minecraft_launcher_lib tkinterdnd2 pypresence
-</details><details> <summary><b>Как обновить SelfMC?</b></summary>
+
+pip install PySide6 minecraft_launcher_lib requests certifi pillow pypresence
+
+Как обновить SelfMC?
 Запусти — он сам проверит обновления. Или нажми 🔄 в топбаре.
 
-</details><details> <summary><b>Где хранятся настройки и логи?</b></summary>
-Настройки: %APPDATA%\SelfMC\settings.json
+Где хранятся настройки и логи?
 
-Лог: %APPDATA%\SelfMC\last_run.log
+   Настройки: %APPDATA%\SelfMC\settings.json
 
-Игра: %APPDATA%\.minecraft\
+  Лог: %APPDATA%\SelfMC\last_run.log
 
-</details><details> <summary><b>Как включить/выключить Discord RPC?</b></summary>
-Открой Настройки → Лаунчер → галочка «Показывать статус в Discord».
+   Игра: %APPDATA%\.minecraft\
 
-</details><details> <summary><b>Работает ли на Linux?</b></summary>
+Как включить/выключить Discord RPC?
+Открой Настройки → Лаунчер → галочка «Discord Rich Presence».
+
+Работает ли на Linux?
 Пока нет. Проект ориентирован на Windows. В планах — сборка для Linux.
 
-</details><details> <summary><b>Что с CurseForge?</b></summary>
+Что с CurseForge?
 Поддержка CurseForge через API — в разработке.
-
-</details>
 📄 Лицензия
+
 Этот проект распространяется под лицензией MIT. Подробности в файле LICENSE.
-
 💖 Благодарности
-🎮 Mojang — за Minecraft
 
-🧵 Fabric / Forge / Quilt — за модлоадеры
+  🎮 Mojang — за Minecraft
 
-📦 Modrinth — за открытое API
+   🧵 Fabric / Forge / Quilt — за модлоадеры
 
-🐍 Python + CustomTkinter — за инструменты
+  📦 Modrinth — за открытое API
 
-🎨 Сообщество — за поддержку
+  🐍 Python + PySide6 — за инструменты
 
-<div align="center">
+  🎨 Сообщество — за поддержку
+
 🌟 Понравился проект? Поставь звезду!
+
 https://api.star-history.com/svg?repos=daanilll/SelfMC&type=Date
 
 Сделано с ❤️ на Windows
-
-</div>
